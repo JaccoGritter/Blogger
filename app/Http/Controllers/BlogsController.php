@@ -14,7 +14,8 @@ class BlogsController extends Controller
      */
     public function index()
     {
-        return view('blogs.index');
+        $blogs = Blog::all();
+        return view('blogs.index', compact('blogs'));
     }
 
     /**
@@ -51,7 +52,8 @@ class BlogsController extends Controller
      */
     public function show($id)
     {
-        //
+        $blog = Blog::findOrFail($id);
+        return view('blogs.show', compact('blog'));
     }
 
     /**
