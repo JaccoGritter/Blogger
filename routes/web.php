@@ -19,3 +19,5 @@ Route::get('/blogs', 'BlogsController@index')->name('blogs.index');
 Route::get('/blogs/create', 'BlogsController@create')->name('blogs.create');
 Route::post('/blogs', 'BlogsController@store')->name('blogs.store');
 Route::get('/blogs/show/{id}', 'BlogsController@show')->name('blogs.show');
+Route::get('/blogs/{id}/edit', 'BlogsController@edit')->name('blogs.edit');
+Route::post('/blogs/{id}/update', 'BlogsController@update')->name('blogs.update');

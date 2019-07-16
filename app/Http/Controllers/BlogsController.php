@@ -64,7 +64,8 @@ class BlogsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $blog = Blog::findOrFail($id);
+        return view ('blogs.edit', compact('blog'));
     }
 
     /**
@@ -76,7 +77,11 @@ class BlogsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $blog = Blog::findOrFail($id);
+        $blog->title = $request->title;
+        $blog->content = $request->content;
+        $blog->update();
+        return redirect ('blogs');
     }
 
     /**
