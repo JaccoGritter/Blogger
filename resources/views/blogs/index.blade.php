@@ -15,6 +15,11 @@
             <div class="card-body">
 
                 {{ $blog->content }}
+
+                <p class="font-weight-light">
+                    posted {{ $blog->created_at->diffForhumans() }}
+                </p>
+
             </div>
         </div>
     </div>
