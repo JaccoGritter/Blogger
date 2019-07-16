@@ -7,6 +7,7 @@
 
     <form action=" {{ route ('blogs.update', $blog->id) }} " method = "post">
     @csrf 
+    @method('PATCH')
 
     <div class="form-group">
         <label for="title">Title</label>
