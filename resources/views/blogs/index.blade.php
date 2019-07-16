@@ -1,16 +1,16 @@
 @extends('layouts.bloglayout')
 
 @section('content')
-
+<br><br>
 <div class="row">
 
 
     @foreach($blogs as $blog)
 
-    <div class="col-md-6">
+    <div class="col-md-6 mt-2">
         <div class="card">
             <div class="card-header">
-                <a href=" {{route('blogs.show', $blog->id) }}" > {{ $blog->title}} </a>
+                <h5>{{ $blog->title}} </h5>
             </div>
             <div class="card-body">
 
@@ -19,6 +19,7 @@
                 <p class="font-weight-light">
                     posted {{ $blog->created_at->diffForhumans() }}
                 </p>
+                <a href={{ route ('blogs.show', $blog->id)}} class="btn btn-outline-primary">Show</a>
 
             </div>
         </div>
