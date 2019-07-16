@@ -17,13 +17,15 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{{route('blogs.index')}}">Home <span class="sr-only">(current)</span></a>
       </li>
     </ul>
   </div>
 </nav>
 
+<div class="container">
 @yield('content')
+</div>
 
 </body>
 </html>
