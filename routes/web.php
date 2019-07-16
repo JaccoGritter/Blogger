@@ -15,4 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('blogs', 'BlogsController@index')->name('blogs.index');
+Route::get('/blogs', 'BlogsController@index')->name('blogs.index');
+Route::get('/blogs/create', 'BlogsController@create')->name('blogs.create');
+Route::post('/blogs', 'BlogsController@store')->name('blogs.store');
