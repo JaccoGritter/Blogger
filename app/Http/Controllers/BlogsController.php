@@ -14,7 +14,7 @@ class BlogsController extends Controller
      */
     public function index()
     {
-        $blogs = Blog::all();
+        $blogs = Blog::all()->sortByDesc('created_at');
         return view('blogs.index', compact('blogs'));
     }
 
