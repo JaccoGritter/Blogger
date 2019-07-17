@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="container">
-    <h3>Blogger</h3>
+    <h3>Create Your Holiday Blog Post</h3>
 
     <form action=" {{ route ('blogs.store') }} " method = "post">
     @csrf 

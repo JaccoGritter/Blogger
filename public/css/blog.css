@@ -3,5 +3,8 @@ body, html {
     background-image: linear-gradient(rgb(0, 204, 255),white, rgb(0, 204, 255));
   }
   
-
+  #palm {
+    -webkit-filter: invert(100%); /* Safari 6.0 - 9.0 */
+    filter: invert(100%);
+  }
 

@@ -7,7 +7,7 @@
 
     @foreach($blogs as $blog)
 
-    <div class="col-md-6 mt-2">
+    <div class="col-md-6 mb-3">
         <div class="card">
             <div class="card-header">
                 <h5>{{ $blog->title}} </h5>
