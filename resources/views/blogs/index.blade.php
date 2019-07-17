@@ -14,7 +14,9 @@
             </div>
             <div class="card-body">
 
-                {{ $blog->content }}
+                <!-- {{ Str::limit($blog->content, 40, ' (...)') }} -->
+                {{ Str::words($blog->content, 10, '...') }}
+                
 
                 <p class="font-weight-light">
                     posted {{ $blog->created_at->diffForhumans() }}
