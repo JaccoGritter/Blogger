@@ -11,7 +11,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Holiday Blogger</a>
-  <img src="{{ asset('images/palm-tree-tree-silhouette.png') }}" alt="palm tree" id="palm">
+  <img src="{{ asset('images/palm-tree-tree-silhouette1.png') }}" alt="palm tree" id="palm">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
