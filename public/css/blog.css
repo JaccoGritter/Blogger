@@ -8,3 +8,10 @@ body, html {
     filter: invert(100%);
   }
 
+  .showpost {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+  }
+

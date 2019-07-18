@@ -5,9 +5,31 @@
 <div class="row">
     <div class="col-md-12">
         <br>
-        <h3>{{$blog->title}}</h3>
-        <p class="lead"> {{$blog->content}} </p>
+        <div class="showpost">
+            <h3>{{$blog->title}}</h3>
+            <p class="lead"> {{$blog->content}} </p>
+        </div>
+    
+    @if(count($blog->comments) > 0)
+        
+        <div class="ml-5">
+        <h5>Comments</h5>
+            @foreach($blog->comments as $comment)
+            <div>
+                <p>{{$comment->screen_name}}</p>
+                
+                <p>{{$comment->comment}}</p>
+                <p class="font-weight-light">
+                    posted {{ $comment->created_at->diffForhumans() }}
+                </p>
+            </div>
+            @endforeach
+        </div>
+    @endif
+
     </div>
+
+
     <div class="ml-3 mr-2">
         <a href="{{route('blogs.index')}}" class="btn btn-outline-primary">Home</a>
     </div>
