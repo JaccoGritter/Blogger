@@ -12,6 +12,9 @@
         <a href="{{route('blogs.index')}}" class="btn btn-outline-primary">Home</a>
     </div>
     <div class="mr-2">
+        <a href="{{route('blogs.add_comment', $blog->id)}}" class="btn btn-outline-primary">Add Comment</a>
+    </div>
+    <div class="mr-2">
         <a href="{{route('blogs.edit', $blog->id)}}" class="btn btn-outline-primary">Edit</a>
     </div>
     <div>

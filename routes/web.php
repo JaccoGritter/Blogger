@@ -22,3 +22,6 @@ Route::get('/blogs/show/{id}', 'BlogsController@show')->name('blogs.show');
 Route::get('/blogs/{id}/edit', 'BlogsController@edit')->name('blogs.edit');
 Route::patch('/blogs/{id}/update', 'BlogsController@update')->name('blogs.update');
 Route::delete('/blogs/{id}', 'BlogsController@destroy')->name('blogs.destroy');
+
+Route::get('/blogs/{id}/addcomment', 'BlogsController@addComment')->name('blogs.add_comment');
+Route::post('/blogs/addcomment', 'BlogsController@storeComment')->name('blogs.store_comment');

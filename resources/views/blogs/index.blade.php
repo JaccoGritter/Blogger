@@ -14,14 +14,12 @@
             </div>
             <div class="card-body">
 
-                <!-- {{ Str::limit($blog->content, 40, ' (...)') }} -->
                 {{ Str::words($blog->content, 10, '...') }}
-                
 
                 <p class="font-weight-light">
                     posted {{ $blog->created_at->diffForhumans() }}
                 </p>
-                <a href={{ route ('blogs.show', $blog->id)}} class="btn btn-outline-primary">Show</a>
+                <a href={{ route ('blogs.show', $blog->id)}} class="btn btn-outline-primary">View Post</a>
 
             </div>
         </div>

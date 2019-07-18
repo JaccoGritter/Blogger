@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Blog;
+use App\Comment;
 
 class BlogsController extends Controller
 {
@@ -94,6 +95,21 @@ class BlogsController extends Controller
     {
         $blog = Blog::findOrFail($id);
         $blog->delete();
+        return redirect ('blogs');
+    }
+
+    public function addComment($id){
+        $blog = Blog::findOrFail($id);
+        return view ('blogs.addcomment', compact('blog'));
+    }
+
+    public function storeComment(Request $request)
+    {
+        $comment = new Comment;
+        $comment->blog_id = $request->blog_id;
+        $comment->screen_name = $request->screen_name;
+        $comment->comment = $request->comment;
+        $comment->save();
         return redirect ('blogs');
     }
 
