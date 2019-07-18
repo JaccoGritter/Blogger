@@ -7,22 +7,26 @@
         <br>
         <div class="showpost">
             <h3>{{$blog->title}}</h3>
-            <p class="lead"> {{$blog->content}} </p>
+
+            <!-- {!! nl2br(e($myText)) !!} is needed to preserve line breaks after retreiving data from MySQL -->
+            <p class="lead"> {!! nl2br(e($blog->content)) !!} </p>
+
         </div>
     
     @if(count($blog->comments) > 0)
-        
-        <div class="ml-5">
-        <h5>Comments</h5>
+        <br>
+        <div class="ml-5 comment">
+        <h5><span class="badge badge-info mb-2">Comments</span></h5>
             @foreach($blog->comments as $comment)
             <div>
-                <p>{{$comment->screen_name}}</p>
+                <p><em>{{$comment->screen_name}}</em></p>
                 
                 <p>{{$comment->comment}}</p>
                 <p class="font-weight-light">
                     posted {{ $comment->created_at->diffForhumans() }}
                 </p>
             </div>
+            <br>
             @endforeach
         </div>
     @endif
@@ -47,5 +51,5 @@
         </form>
     </div>
 </div>
-
+<br><br>
 @endsection
