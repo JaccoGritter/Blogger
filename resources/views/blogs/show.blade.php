@@ -8,7 +8,7 @@
         <div class="showpost">
             <h3>{{$blog->title}}</h3>
 
-            <!-- {!! nl2br(e($myText)) !!} is needed to preserve line breaks after retreiving data from MySQL -->
+            {{-- {!! nl2br(e($myText)) !!} is needed to preserve line breaks after retreiving data from MySQL --}}
             <p class="lead"> {!! nl2br(e($blog->content)) !!} </p>
 
         </div>
